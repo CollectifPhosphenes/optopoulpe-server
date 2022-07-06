@@ -1,4 +1,5 @@
-from datamodels import GlobalState, Track, ColorMod, MaskMod, Slicer, Feedback, Strobe, ColorPalette, reduce_int
+from datamodels import GlobalState, Track, ColorMod, MaskMod, Slicer, Feedback, Strobe, ColorPalette
+from utils import reduce_int
 
 STATE_MAPPING = {
     "do_kill_lights": "kill_all_tracks_enabled",

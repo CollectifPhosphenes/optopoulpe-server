@@ -3,9 +3,7 @@ from typing import Optional
 
 from orjson import orjson
 
-
-def reduce_int(int_value: int, ratio: int):
-    return int(float(int_value) / ratio)
+from utils import reduce_int
 
 
 @dataclass
