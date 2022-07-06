@@ -1,4 +1,15 @@
-# Installation
+# optopoulpe-server
+This repository holds a small server running on `bottle.py` that should be run on the raspberry pi that controls
+the Optopoulpe setup. Everytime a consumer asks for the current state of the midi controller, the server parses the 
+latest dump file created by the Optopoulpe driver and returns it in an easily usable json format.
+
+Below is a mockup of the webpage that will be the first consumer of this server.
+
+
+![](layout_mockup.png)
+
+
+## Installation
 
 ```shell
 virtualenv venv
@@ -10,17 +21,17 @@ python app/server.py
 ```
 
 
-# Configuration
+## Configuration
 
 To change the location of the dump file that should be parsed, edit `app/server.py` and pass the file path as a string to
 the `parse_dump_file` function call.
 
-# Usage
+## Usage
 
 Simply make a GET request to `127.0.0.1:8069/parse`, you will in return get an `application/json` response with the 
 parsed dump data.
 
-# Example
+## Example
 
 ```shell
 curl 127.0.0.1:8069/parse
