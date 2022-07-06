@@ -37,6 +37,9 @@ parsed dump data.
 curl 127.0.0.1:8069/parse
 ```
 ```json
+// 20220706235226
+// http://127.0.0.1:8069/parse
+
 {
   "state": {
     "tracks": {
@@ -49,7 +52,7 @@ curl 127.0.0.1:8069/parse
             "width": 28,
             "offset": 85
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -76,7 +79,7 @@ curl 127.0.0.1:8069/parse
           "enabled": false
         },
         "index": 0,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 44,
         "is_on_group1": false,
@@ -92,7 +95,7 @@ curl 127.0.0.1:8069/parse
             "width": 37,
             "offset": 56
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -119,7 +122,7 @@ curl 127.0.0.1:8069/parse
           "enabled": true
         },
         "index": 1,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 111,
         "is_on_group1": true,
@@ -133,7 +136,7 @@ curl 127.0.0.1:8069/parse
           "color_palette": {
             "selected_palette": 5,
             "width": 127,
-            "offset": null
+            "offset": 64
           },
           "oscillator_track": 2
         },
@@ -162,7 +165,7 @@ curl 127.0.0.1:8069/parse
           "enabled": true
         },
         "index": 2,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 110,
         "is_on_group1": true,
@@ -178,7 +181,7 @@ curl 127.0.0.1:8069/parse
             "width": 75,
             "offset": 42
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -205,7 +208,7 @@ curl 127.0.0.1:8069/parse
           "enabled": true
         },
         "index": 3,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 127,
         "is_on_group1": true,
@@ -219,7 +222,7 @@ curl 127.0.0.1:8069/parse
           "color_palette": {
             "selected_palette": 6,
             "width": 127,
-            "offset": null
+            "offset": 64
           },
           "oscillator_track": 3
         },
@@ -248,7 +251,7 @@ curl 127.0.0.1:8069/parse
           "enabled": false
         },
         "index": 4,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 87,
         "is_on_group1": true,
@@ -264,7 +267,7 @@ curl 127.0.0.1:8069/parse
             "width": 0,
             "offset": 24
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -291,7 +294,7 @@ curl 127.0.0.1:8069/parse
           "enabled": true
         },
         "index": 5,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 64,
         "is_on_group1": true,
@@ -307,7 +310,7 @@ curl 127.0.0.1:8069/parse
             "width": 0,
             "offset": 53
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -334,7 +337,7 @@ curl 127.0.0.1:8069/parse
           "enabled": false
         },
         "index": 6,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 87,
         "is_on_group1": true,
@@ -350,7 +353,7 @@ curl 127.0.0.1:8069/parse
             "width": 0,
             "offset": 46
           },
-          "oscillator_track": null
+          "oscillator_track": 3
         },
         "mask": {
           "label": "Mask",
@@ -377,7 +380,7 @@ curl 127.0.0.1:8069/parse
           "enabled": false
         },
         "index": 7,
-        "slider_value": null,
+        "slider_value": 122,
         "slider_max_enabled": false,
         "time_scale": 90,
         "is_on_group1": true,
@@ -385,10 +388,9 @@ curl 127.0.0.1:8069/parse
         "is_on_group3": true
       }
     },
-    "current_selected_track_index": null,
-    "current_selected_track": null,
+    "current_selected_track_index": 3,
     "kill_all_tracks_enabled": false,
-    "bpm": 1376.0
+    "bpm": 137.6
   }
 }
 ```

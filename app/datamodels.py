@@ -1,3 +1,4 @@
+import random
 from dataclasses import dataclass
 from typing import Optional
 
@@ -18,14 +19,14 @@ class Effect:
 @dataclass
 class ColorPalette:
     selected_palette: Optional[int] = None
-    width: Optional[int] = None
-    offset: Optional[int] = None
+    width: Optional[int] = 32
+    offset: Optional[int] = 64
 
 
 @dataclass
 class ColorMod(Effect):
-    color_palette: ColorPalette = None
-    oscillator_track: Optional[int] = None
+    color_palette: ColorPalette = ColorPalette()
+    oscillator_track: Optional[int] = random.choice(range(4))
 
     def set_attribute(self, key, value):
         if key == "osc":
@@ -96,8 +97,8 @@ class Track:
 
     index: Optional[int] = None
 
-    slider_value: Optional[int] = None
-    slider_max_enabled: Optional[bool] = None
+    slider_value: Optional[int] = random.choice(range(128))
+    slider_max_enabled: Optional[bool] = False
 
     time_scale: Optional[int] = None
 
@@ -108,11 +109,10 @@ class Track:
 
 @dataclass
 class GlobalState:
-    tracks: dict[int, Track]
-    current_selected_track_index: Optional[int] = None
-    current_selected_track: Optional[Track] = None
+    tracks: dict
+    current_selected_track_index: Optional[int] = 3
 
-    kill_all_tracks_enabled: Optional[bool] = None
+    kill_all_tracks_enabled: Optional[bool] = False
 
     bpm: Optional[float] = None
 

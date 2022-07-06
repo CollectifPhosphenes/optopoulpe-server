@@ -36,11 +36,11 @@ def parse_dump_value(value: str):
     elif value == "y":
         return True
     elif len(value) > 3:
-        return float(value)
+        return float(value) / 10
     return int(value)
 
 
-def parse_dump_file(file_path: str):
+def parse_dump_file(file_path: str) -> GlobalState:
     with open(file_path) as file:
         lines = file.readlines()
 

@@ -12,7 +12,11 @@ for plugin in web_server.plugins:
 
 @web_server.get("/parse")
 def parse():
-    return {"state": parse_dump_file(file_path="examples/losingmymind.txt")}
+    state = parse_dump_file(file_path="examples/losingmymind.txt")
+    if not state.current_selected_track_index:
+        state.current_selected_track_index = 2
+        state.current_selected_track = state.tracks[str(state.current_selected_track_index)]
+    return {"state": state}
 
 
 run(web_server, host="localhost", port=8069)
