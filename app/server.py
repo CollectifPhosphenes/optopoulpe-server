@@ -16,6 +16,7 @@ def parse():
     # file_path = "/root/path/on/raspberry/"
     file_path = get_random_save()
     state = parse_dump_file(file_path)
+    state.used_save = file_path
     return {"state": state}
 
 

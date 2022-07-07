@@ -6,11 +6,11 @@ SAVES = (
     "goodnight",
     "intro-ghost-town",
     "letithappen",
-    "losingmymind.txt",
+    "losingmymind",
     "reflections",
     "supersonic",
     "timhsupersonic",
-    "vital"
+    "vital1"
 )
 
 
@@ -19,4 +19,4 @@ def reduce_int(int_value: int, ratio: int):
 
 
 def get_random_save():
-    return f"{random.choice(SAVES)}.txt"
+    return f"examples/{random.choice(SAVES)}.txt"
