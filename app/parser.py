@@ -1,3 +1,5 @@
+import random
+
 from datamodels import GlobalState, Track, ColorMod, MaskMod, Slicer, Feedback, Strobe, ColorPalette
 from utils import reduce_int
 
@@ -53,6 +55,7 @@ def parse_dump_file(file_path: str) -> GlobalState:
                 slicer=Slicer(label="Uneven Slicer"),
                 feedback=Feedback(label="Sustain"),
                 strobe=Strobe(label="Strobe"),
+                slider_value=random.choice(range(128))
             ) for idx in range(8)
         },
     )

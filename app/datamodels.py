@@ -97,7 +97,7 @@ class Track:
 
     index: Optional[int] = None
 
-    slider_value: Optional[int] = random.choice(range(128))
+    slider_value: Optional[int] = None
     slider_max_enabled: Optional[bool] = False
 
     time_scale: Optional[int] = None
@@ -110,11 +110,12 @@ class Track:
 @dataclass
 class GlobalState:
     tracks: dict
-    current_selected_track_index: Optional[int] = 3
+    current_selected_track_index: Optional[int] = 2
 
     kill_all_tracks_enabled: Optional[bool] = False
 
     bpm: Optional[float] = None
+    strobe_speed: Optional[int] = random.choice(range(128))
 
     def json(self):
         return orjson.dumps(self)

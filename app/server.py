@@ -1,7 +1,8 @@
-from bottle import Bottle, JSONPlugin, run
+from bottle import Bottle, JSONPlugin, run, response
 from orjson import orjson
 
 from parser import parse_dump_file
+from utils import get_random_save
 
 web_server = Bottle()
 
@@ -12,11 +13,15 @@ for plugin in web_server.plugins:
 
 @web_server.get("/parse")
 def parse():
-    state = parse_dump_file(file_path="examples/losingmymind.txt")
-    if not state.current_selected_track_index:
-        state.current_selected_track_index = 2
-        state.current_selected_track = state.tracks[str(state.current_selected_track_index)]
+    # file_path = "/root/path/on/raspberry/"
+    file_path = get_random_save()
+    state = parse_dump_file(file_path)
     return {"state": state}
+
+
+@web_server.hook("after_request")
+def enable_cors():
+    response.headers["Access-Control-Allow-Origin"] = "*"
 
 
 run(web_server, host="localhost", port=8069)
