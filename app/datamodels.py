@@ -110,7 +110,7 @@ class Track:
 @dataclass
 class GlobalState:
     tracks: dict
-    current_selected_track_index: Optional[int] = 2
+    current_selected_track_index: Optional[int] = 5
 
     kill_all_tracks_enabled: Optional[bool] = False
 
